@@ -9,6 +9,7 @@ public class Timer
     private TimerState state;
     private float durationTime;
     private float elpasedTime;
+
     public void Tick(float deltaTime)
     {
         if (state == TimerState.Running)

@@ -13,10 +13,10 @@ public class IPlayerInput : MonoBehaviour
     public bool Jump { get; protected set; }
     public bool Roll { get; protected set; }
     public bool Lockon { get; protected set; }
-    public bool LeftAttack { get; protected set; }
-    public bool RightAttack { get; protected set; }
-    public bool LeftHeavyAttack { get; protected set; }
-    public bool RightHeavyAttack { get; protected set; }
+    public bool LeftAtk { get; protected set; }
+    public bool RightAtk { get; protected set; }
+    public bool LeftHAtk { get; protected set; }
+    public bool RightHAtk { get; protected set; }
     public bool Defense { get; protected set; }
     public bool Action { get; protected set; }
     public bool ShortcutLeftSelect { get; protected set; }
@@ -39,6 +39,7 @@ public class IPlayerInput : MonoBehaviour
         output.y = axis.y * Mathf.Sqrt(1 - (axis.x * axis.x) / 2.0f);
         return output;
     }
+
     protected void UpdateDmagDvec(float dup, float dright)
     {
         Vector2 axis = SquareToCircle(new Vector2(dright, dup));
